@@ -13,25 +13,26 @@ Estudiante Pablo Carrai
 Correo pablo.carrai2024@fablab.mvl.edu.ar
 
 """
-
-numero_jugador_1 = int(input("Ingrese un numero entre 1 y 10    "))
+jugador_numero1 = input("Jugador 1 Ingrese su nombre  ")
+numero_jugador_1 = int(input(f"{jugador_numero1} Ingrese un numero entre 1 y 10    "))
 while numero_jugador_1 not in range(1,11):
-    numero_jugador_1 = int(input("Denuevo , Ingrese un numero entre 1 y 10    "))
+    numero_jugador_1 = int(input(f"{jugador_numero1} Denuevo , Ingrese un numero entre 1 y 10    "))
 
-print("Jugador 2 es su hora de adivinar que numero eligio su rival   ")
-numero_jugador_2 = int(input("Adivine el numero    "))
+jugador_numero2 = input("Jugador 2 Ingrese su nombre  ")
+print(f"{jugador_numero2} es su hora de adivinar que numero eligio su rival {jugador_numero1}")
+numero_jugador_2 = int(input(f"{jugador_numero2} Adivine el numero    "))
 cpifies = 2
 
 while numero_jugador_1 != numero_jugador_2:
     cpifies -= 1
-    print(f"Te quedan {cpifies} intentos")
+    print(f"Te quedan {cpifies+1} intentos")
     numero_jugador_2 = int(input("Adivine el numero    "))
     if cpifies == 0:
-        print("Perdiste")
+        print(f"Perdiste, el numero a adivinar era {numero_jugador_1}")
         break
 
 if numero_jugador_1 == numero_jugador_2:     
-    print("Adivinastes ")
-    print("Tu puntaje es", cpifies, "Puntos")
+    print(f"Adivinastes, el numero a adivinar era {numero_jugador_1} ")
+    print("Tu puntaje es", cpifies+1, "Puntos")
 
 exit()
