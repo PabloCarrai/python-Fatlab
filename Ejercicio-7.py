@@ -52,7 +52,7 @@ print("Vas a participar de un sorteo, Adivina lo siguiente  ")
 for x in range(entradas_c):
     adivinar = input("Quien dirigio ET?  ")
     if adivinar == "Steven Spielberg":        
-        print("Adivinaste, ten ganaste un descuento de $",((entradas_c * 1000) / 2))
+        print("Adivinaste, te ganaste un descuento de $",((entradas_c * 1000) / 2))
         exit()
     else: 
         print("No es correcto  ")
