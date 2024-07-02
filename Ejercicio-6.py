@@ -15,7 +15,7 @@ Correo pablo.carrai2024@fablab.mvl.edu.ar
 """
 jugador_numero1 = input("Jugador 1 Ingrese su nombre  ")
 numero_jugador_1 = int(input(f"{jugador_numero1} Ingrese un numero entre 1 y 10    "))
-while numero_jugador_1 not in range(1,11):
+while numero_jugador_1 < 1 or numero_jugador_1 > 10 :
     numero_jugador_1 = int(input(f"{jugador_numero1} Denuevo , Ingrese un numero entre 1 y 10    "))
 
 jugador_numero2 = input("Jugador 2 Ingrese su nombre  ")
