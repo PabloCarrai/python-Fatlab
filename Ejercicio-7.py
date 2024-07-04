@@ -34,12 +34,22 @@ Estudiante Pablo Carrai
 Correo pablo.carrai2024@fablab.mvl.edu.ar
 
 """
+def ingresar():
+    mail = input("Ingrese su correo electronico ")
+    carrobas = 0
+    for x in mail:
+        if x == "@":
+            carrobas += 1
+
+    if carrobas != 1:
+        print("Su mail debe tener un unico arroba ")
+        ingresar()
+
 peliculas = ["Rambo","Nothing Hill","Patch Adams","Locademia de Policia"]
 print("Bienvenido al Cine La plata")
-correo = input("Ingrese su correo electronico   ")
-while "@" not in correo:
-    correo = input("De nuevo. Ingrese su correo electronico valido   ")
+ingresar()
 print("Acceso Permitido")
+
 pelicula_elegida = input("Ingrese que pelicula desea ver ")
 while pelicula_elegida not in peliculas:
     print("Elija una pelicula en cartelera  ")
